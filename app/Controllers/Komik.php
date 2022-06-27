@@ -163,7 +163,7 @@ class Komik extends BaseController
 
         $fileSampul = $this->request->getFile('sampul');
 
-        // cek gambar, apakah tetap gambar lama
+        // cek gambar, apakah gambar yg diupload
         if ($fileSampul->getError() == 4) {
             $namaSampul = $this->request->getVar('sampulLama');
         } else {
