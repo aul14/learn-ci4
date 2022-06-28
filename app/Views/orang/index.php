@@ -2,8 +2,20 @@
 <?= $this->section('content'); ?>
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-6">
             <h1 class="mt-2">Daftar Orang</h1>
+            <form action="" method="post">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Masukan keyword pencarian..." aria-label="Masukan keyword pencarian..." aria-describedby="button-addon2" name="keyword">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="submit" id="submit">Cari</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
             <?php if (session()->getFlashdata('pesan')) : ?>
                 <div class="alert alert-success" role="alert">
                     <?= session()->getFlashdata('pesan'); ?>

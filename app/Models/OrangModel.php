@@ -19,4 +19,9 @@ class OrangModel extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
     protected $deletedField  = 'deleted_at';
+
+    public function search($keyword)
+    {
+        return $this->table('orang')->like('nama', $keyword)->orLike('alamat', $keyword);
+    }
 }

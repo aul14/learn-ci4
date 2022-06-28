@@ -49,6 +49,7 @@ $routes->delete('/komik/(:num)', 'Komik::delete/$1');
 $routes->get('/komik/(:any)', 'Komik::detail/$1');
 
 $routes->get('/orang', 'Orang::index');
+$routes->post('/orang', 'Orang::index');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
